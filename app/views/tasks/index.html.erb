@@ -1,1 +1,7 @@
-Ici on va lister les taches
+Les tâches a executer
+<% @tasks.each do |task| %>
+  <%= task.title %>
+<% end %>
+<div class="">
+  <%= link_to "+", new_task_path %>
+</div>
