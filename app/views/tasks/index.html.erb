@@ -1,13 +1,12 @@
 <div class="container">
   Les tâches a executer
-  <ul>
-    <% @tasks.each do |task| %>
-      <li>
-        <%= task.title %>
-      </li>
-    <% end %>
-  </ul>
+  <div class="task-index">
+    <ul>
+      <%= render "index" %>
+    </ul>
+  </div>
   <div class="">
     <%= link_to "ajout+", new_task_path, remote: true, class: "btn btn-primary" %>
   </div>
 </div>
+<div id="task-modal" class="modal fade"></div>
