@@ -15,13 +15,11 @@ class TasksController < ApplicationController
   def edit
     @tasks = Task.all
     @task = Task.find(params[:id])
-    @task.update(done: true)
+    @task.update(done: !@task.done)
   end
 
   def update
-    @tasks = Task.all
-    @task = Task.find(params[:id])
-    @task.update(done: true)
+
   end
 
   private

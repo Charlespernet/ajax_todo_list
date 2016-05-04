@@ -1,6 +1,9 @@
 <% @tasks.each do |task| %>
   <li>
-    <%= task.done ? '[ x ]' : '[ ]' %>
-    <%= task.title %> - <%= link_to "Mark as done", edit_task_path(task), remote: true, class: "btn btn-primary" %>
+    <% if task.done %>
+      [ x ] <%= task.title %> - <%= link_to "Mark as undone", edit_task_path(task), remote: true, class: "btn btn-danger" %>
+    <% else %>
+      [ ] <%= task.title %> - <%= link_to "Mark as done", edit_task_path(task), remote: true, class: "btn btn-success" %>
+    <% end %>
   </li>
 <% end %>
