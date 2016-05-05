@@ -5,5 +5,5 @@ $("ul.errors").html("")
   <% end %>
 <% else %>
   $(".task-index").html("<%= j(render 'index') %>")
-  $("#task-modal").modal("hide")
+  $("#task-slide").slideUp();
 <% end %>

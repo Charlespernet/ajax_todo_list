@@ -1,12 +1,19 @@
 <div class="container">
-  Les tâches a executer
-  <div class="task-index">
-    <ul>
-      <%= render "index" %>
-    </ul>
-  </div>
-  <div class="">
-    <%= link_to "ajout+", new_task_path, remote: true, class: "btn btn-primary" %>
+  <div class="row">
+    <div class="col-xs-6">
+      Les tâches a executer
+      <div class="task-index">
+        <ul>
+          <%= render "index" %>
+        </ul>
+      </div>
+      <div class="">
+        <%= link_to "ajout+", new_task_path, remote: true, class: "btn btn-primary" %>
+      </div>
+    </div>
+    <div class="col-xs-6">
+      <div id="task-slide">
+      </div>
+    </div>
   </div>
 </div>
-<div id="task-modal" class="modal fade"></div>

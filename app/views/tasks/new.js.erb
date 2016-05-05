@@ -1,2 +1,5 @@
-$("#task-modal").html("<%= j(render 'new') %>")
-$("#task-modal").modal("show")
+$("#task-slide").html("<%= j(render 'new') %>")
+$("#task-slide").slideDown();
+$("#task-dismiss").click(function() {
+  $("#task-slide").slideUp();
+});
